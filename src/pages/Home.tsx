@@ -8,12 +8,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-bg-onyx">
         <div className="absolute inset-0 z-0 opacity-40">
-          <img 
-            src="/horozantal gutter images/brick house black gutters.png" 
-            alt="Hero Background" 
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
+          >
+            <source src="/Rainfall.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-bg-onyx/20 via-transparent to-bg-onyx"></div>
         </div>
 
