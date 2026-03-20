@@ -194,39 +194,40 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold">The Elite Experience</h2>
         </div>
         
-        <div className="flex space-x-8 animate-marquee whitespace-nowrap">
-          {[
-            { name: "Robert M.", text: "The 7-inch gutters handled the last storm perfectly. Elite work." },
-            { name: "Sarah L.", text: "Most professional crew I've ever had at my home. Highly recommend." },
-            { name: "James T.", text: "45 years of experience really shows in the final product. Flawless." },
-            { name: "Linda K.", text: "The copper metallic color is stunning. It changed the whole look of our house." },
-            { name: "Michael P.", text: "Fast, clean, and the gutter guards are a game changer. No more ladders!" }
-          ].map((review, i) => (
-            <div key={i} className="inline-block p-10 bg-white/5 liquid-shield min-w-[400px]">
-              <div className="flex text-azure mb-4">
-                {[1, 2, 3, 4, 5].map(s => <span key={s} className="text-xl">★</span>)}
-              </div>
-              <p className="text-silver text-lg italic mb-6 whitespace-normal">"{review.text}"</p>
-              <p className="text-azure font-bold uppercase tracking-widest text-xs">— {review.name}</p>
+        {(() => {
+          const reviews = [
+            { name: "Shonda Morgan", text: "He went above and beyond helping me find the perfect color for my gutters. I couldn't be more satisfied by the job they did. It makes my house look amazing!" },
+            { name: "Ben Credeur", text: "We are extremely pleased with the quality, price, product, and workmanship of Elite Seamless Gutters! Not only is their work and price excellent, you will not find friendlier people." },
+            { name: "Sadie Akinkugbe", text: "If I could give 10 stars I would! Elite Seamless Gutters LLC exceeded my expectations in every way possible! Five stars without a doubt!" },
+            { name: "Loni Jean Harding", text: "Jerry Morgan made me feel like I was not only a priority, but he also took time to educate me on the differences and importance that these gutters have on maintaining your home." },
+            { name: "Jared Welch", text: "Great guys, great company. They charged what they quoted unlike some contractors. Excellent work, very honest guys. Highly recommend!" },
+            { name: "Chad Luke", text: "Jerry was very responsive. Color was matched perfectly. Installation was done quickly, without any issues, with all mess cleaned up!" },
+            { name: "Jarrod Antley", text: "They were Prompt, Honest, Trustworthy and Transparent. I am a VERY SATISFIED CUSTOMER and will recommend them to anyone needing gutters!" },
+            { name: "Jason Perrotti", text: "Great company, ran by a stand up guy. Jerry will treat you right." },
+          ];
+          return (
+            <div className="flex space-x-8 animate-marquee whitespace-nowrap">
+              {reviews.map((review, i) => (
+                <div key={i} className="inline-block p-10 bg-white/5 liquid-shield min-w-[400px]">
+                  <div className="flex text-azure mb-4">
+                    {[1, 2, 3, 4, 5].map(s => <span key={s} className="text-xl">★</span>)}
+                  </div>
+                  <p className="text-silver text-lg italic mb-6 whitespace-normal">"{review.text}"</p>
+                  <p className="text-azure font-bold uppercase tracking-widest text-xs">— {review.name}</p>
+                </div>
+              ))}
+              {reviews.map((review, i) => (
+                <div key={`dup-${i}`} className="inline-block p-10 bg-white/5 liquid-shield min-w-[400px]">
+                  <div className="flex text-azure mb-4">
+                    {[1, 2, 3, 4, 5].map(s => <span key={s} className="text-xl">★</span>)}
+                  </div>
+                  <p className="text-silver text-lg italic mb-6 whitespace-normal">"{review.text}"</p>
+                  <p className="text-azure font-bold uppercase tracking-widest text-xs">— {review.name}</p>
+                </div>
+              ))}
             </div>
-          ))}
-          {/* Duplicate for seamless loop */}
-          {[
-            { name: "Robert M.", text: "The 7-inch gutters handled the last storm perfectly. Elite work." },
-            { name: "Sarah L.", text: "Most professional crew I've ever had at my home. Highly recommend." },
-            { name: "James T.", text: "45 years of experience really shows in the final product. Flawless." },
-            { name: "Linda K.", text: "The copper metallic color is stunning. It changed the whole look of our house." },
-            { name: "Michael P.", text: "Fast, clean, and the gutter guards are a game changer. No more ladders!" }
-          ].map((review, i) => (
-            <div key={`dup-${i}`} className="inline-block p-10 bg-white/5 liquid-shield min-w-[400px]">
-              <div className="flex text-azure mb-4">
-                {[1, 2, 3, 4, 5].map(s => <span key={s} className="text-xl">★</span>)}
-              </div>
-              <p className="text-silver text-lg italic mb-6 whitespace-normal">"{review.text}"</p>
-              <p className="text-azure font-bold uppercase tracking-widest text-xs">— {review.name}</p>
-            </div>
-          ))}
-        </div>
+          );
+        })()}
       </section>
 
       {/* Gallery Preview */}
