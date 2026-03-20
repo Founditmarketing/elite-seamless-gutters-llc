@@ -1,8 +1,37 @@
+import { useState, useCallback } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Award, Clock } from "lucide-react";
+import Lightbox from "../components/Lightbox";
+
+const miniGalleryImages = [
+  '/vertical image gutters/Garage door gutters.png',
+  '/vertical image gutters/close up black gutters.png',
+  '/vertical image gutters/close up metal building gutters.png',
+  '/vertical image gutters/metal building gutters.png',
+  '/horozantal gutter images/dark gutters.png',
+  '/horozantal gutter images/white gutters white house.png',
+  '/horozantal gutter images/wood house with white gutters.png',
+  '/horozantal gutter images/white house black gutters.png',
+];
 
 export default function Home() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const openLightbox = (index: number) => {
+    setCurrentIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const handlePrev = useCallback(() => {
+    setCurrentIndex((prev) => (prev === 0 ? miniGalleryImages.length - 1 : prev - 1));
+  }, []);
+
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev === miniGalleryImages.length - 1 ? 0 : prev + 1));
+  }, []);
+
   return (
     <main className="overflow-hidden">
       {/* Hero Section */}
@@ -212,24 +241,16 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+            {miniGalleryImages.map((src, i) => (
               <motion.div
-                key={item}
+                key={i}
                 whileHover={{ scale: 0.98 }}
                 className="aspect-[3/4] overflow-hidden liquid-shield cursor-pointer"
+                onClick={() => openLightbox(i)}
               >
                 <img 
-                  src={[
-                    '/vertical image gutters/Garage door gutters.png',
-                    '/vertical image gutters/close up black gutters.png',
-                    '/vertical image gutters/close up metal building gutters.png',
-                    '/vertical image gutters/metal building gutters.png',
-                    '/horozantal gutter images/dark gutters.png',
-                    '/horozantal gutter images/white gutters white house.png',
-                    '/horozantal gutter images/wood house with white gutters.png',
-                    '/horozantal gutter images/white house black gutters.png',
-                  ][item - 1]} 
-                  alt={`Project ${item}`} 
+                  src={src} 
+                  alt={`Project ${i + 1}`} 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </motion.div>
@@ -255,6 +276,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Lightbox
+        images={miniGalleryImages}
+        currentIndex={currentIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onPrev={handlePrev}
+        onNext={handleNext}
+      />
     </main>
   );
 }

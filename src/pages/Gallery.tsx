@@ -1,21 +1,39 @@
+import { useState, useCallback } from "react";
 import { motion } from "motion/react";
+import Lightbox from "../components/Lightbox";
 
-const galleryItems = [
-  { id: 1, title: "Modern Residential", category: "Seamless Gutters" },
-  { id: 2, title: "Architectural Detail", category: "Downspouts" },
-  { id: 3, title: "Commercial Protection", category: "7-Inch Systems" },
-  { id: 4, title: "Premium Copper", category: "Specialty Metals" },
-  { id: 5, title: "Estate Installation", category: "Gutter Guards" },
-  { id: 6, title: "Pineville Project", category: "Seamless Gutters" },
-  { id: 7, title: "Alexandria Custom", category: "Downspouts" },
-  { id: 8, title: "Heritage Home", category: "Restoration" },
-  { id: 9, title: "Modern Farmhouse", category: "Black Gutters" },
-  { id: 10, title: "Lakeside Protection", category: "Gutter Guards" },
-  { id: 11, title: "Industrial Grade", category: "Commercial" },
-  { id: 12, title: "Copper Accents", category: "Premium" },
+const galleryImages = [
+  '/horozantal gutter images/Very close up to gutters.png',
+  '/vertical image gutters/Garage door gutters.png',
+  '/horozantal gutter images/black gutters good picture.png',
+  '/vertical image gutters/close up metal building gutters.png',
+  '/horozantal gutter images/brick house black gutters.png',
+  '/vertical image gutters/close up black gutters.png',
+  '/horozantal gutter images/dark gutters space out.png',
+  '/vertical image gutters/metal building gutters.png',
+  '/horozantal gutter images/dark gutters.png',
+  '/horozantal gutter images/white gutters white house.png',
+  '/horozantal gutter images/wood house with black gutters.png',
+  '/horozantal gutter images/wood house with white gutters.png',
 ];
 
 export default function Gallery() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const openLightbox = (index: number) => {
+    setCurrentIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const handlePrev = useCallback(() => {
+    setCurrentIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
+  }, []);
+
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
+  }, []);
+
   return (
     <main className="pt-32">
       <section className="py-24 bg-bg-onyx">
@@ -33,34 +51,21 @@ export default function Gallery() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {galleryItems.map((item, i) => (
+            {galleryImages.map((src, i) => (
               <motion.div
-                key={item.id}
+                key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: (i % 3) * 0.1 }}
                 className="group relative aspect-[4/5] overflow-hidden liquid-shield cursor-pointer bg-white/5"
+                onClick={() => openLightbox(i)}
               >
                 <img 
-                  src={[
-                    '/horozantal gutter images/Very close up to gutters.png',
-                    '/vertical image gutters/Garage door gutters.png',
-                    '/horozantal gutter images/black gutters good picture.png',
-                    '/vertical image gutters/close up metal building gutters.png',
-                    '/horozantal gutter images/brick house black gutters.png',
-                    '/vertical image gutters/close up black gutters.png',
-                    '/horozantal gutter images/dark gutters space out.png',
-                    '/vertical image gutters/metal building gutters.png',
-                    '/horozantal gutter images/dark gutters.png',
-                    '/horozantal gutter images/white gutters white house.png',
-                    '/horozantal gutter images/wood house with black gutters.png',
-                    '/horozantal gutter images/wood house with white gutters.png',
-                  ][i]} 
-                  alt={item.title} 
+                  src={src} 
+                  alt={`Project ${i + 1}`} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-
               </motion.div>
             ))}
           </div>
@@ -74,6 +79,15 @@ export default function Gallery() {
           <a href="/contact" className="btn-premium">Schedule Your Installation</a>
         </div>
       </section>
+
+      <Lightbox
+        images={galleryImages}
+        currentIndex={currentIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onPrev={handlePrev}
+        onNext={handleNext}
+      />
     </main>
   );
 }
