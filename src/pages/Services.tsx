@@ -1,41 +1,41 @@
 import { motion } from "motion/react";
 
 const colors = [
-  { code: "001", name: "30° White" },
-  { code: "002", name: "Royal Brown" },
-  { code: "003", name: "Antique Ivory" },
-  { code: "004", name: "Black" },
-  { code: "005", name: "Raffia Beige" },
-  { code: "006", name: "Beaver Brown" },
-  { code: "007", name: "Classic Cream" },
-  { code: "008", name: "Clay" },
-  { code: "009", name: "Colonial Blue" },
-  { code: "010", name: "Sherwood Green" },
-  { code: "011", name: "Musket Brown" },
-  { code: "013", name: "Wicker" },
-  { code: "014", name: "Dove Gray" },
-  { code: "015", name: "Almond" },
-  { code: "017", name: "Linen" },
-  { code: "018", name: "Light Bronze" },
-  { code: "019", name: "Tuxedo Gray" },
-  { code: "020", name: "Heritage Cream" },
-  { code: "021", name: "Colonial Gray" },
-  { code: "022", name: "Buckskin Brown" },
-  { code: "023", name: "80° White" },
-  { code: "024", name: "Colonial Red" },
-  { code: "025", name: "Dark Bronze" },
-  { code: "026", name: "Herringbone" },
-  { code: "027", name: "Copper Metallic" },
-  { code: "028", name: "Paint Grip Metallic" },
+  { code: "001", name: "30° White", hex: "#E4E5DF" },
+  { code: "002", name: "Royal Brown", hex: "#4A3A2F" },
+  { code: "003", name: "Antique Ivory", hex: "#D9C3A3" },
+  { code: "004", name: "Black", hex: "#1E201F" },
+  { code: "005", name: "Raffia Beige", hex: "#D0BFA4" },
+  { code: "006", name: "Beaver Brown", hex: "#584433" },
+  { code: "007", name: "Classic Cream", hex: "#DCCFA9" },
+  { code: "008", name: "Clay", hex: "#999587" },
+  { code: "009", name: "Colonial Blue", hex: "#577888" },
+  { code: "010", name: "Sherwood Green", hex: "#295642" },
+  { code: "011", name: "Musket Brown", hex: "#3B3224" },
+  { code: "013", name: "Wicker", hex: "#CEBC9A" },
+  { code: "014", name: "Dove Gray", hex: "#8B9093" },
+  { code: "015", name: "Almond", hex: "#E0D9C1" },
+  { code: "017", name: "Linen", hex: "#EEEEDD" },
+  { code: "018", name: "Light Bronze", hex: "#7F6D5A" },
+  { code: "019", name: "Tuxedo Gray", hex: "#EDE2C0" },
+  { code: "020", name: "Heritage Cream", hex: "#D0BFA1" },
+  { code: "021", name: "Colonial Gray", hex: "#ADB1AF" },
+  { code: "022", name: "Buckskin Brown", hex: "#9B815D" },
+  { code: "023", name: "80° White", hex: "#F0F2EA" },
+  { code: "024", name: "Colonial Red", hex: "#883F2F" },
+  { code: "025", name: "Dark Bronze", hex: "#3F403B" },
+  { code: "026", name: "Herringbone", hex: "#D9CDBA" },
+  { code: "027", name: "Copper Metallic", hex: "#EA8828" },
+  { code: "028", name: "Paint Grip Metallic", hex: "#7A7F7C" },
 ];
 
 const premiumColors = [
-  { code: "130", name: "Satin White", type: "Armor Tough" },
-  { code: "131", name: "Wood Beige", type: "Armor Tough" },
-  { code: "132", name: "Cameo", type: "Armor Tough" },
-  { code: "129", name: "Rustic Copper", type: "Dual Tone" },
-  { code: "890", name: "Solid Copper", type: "Premium Metal" },
-  { code: "920", name: "Galvalume Plus Steel", type: "Premium Metal" },
+  { code: "130", name: "Satin White", type: "Armor Tough", hex: "#E6E7E1" },
+  { code: "131", name: "Wood Beige", type: "Armor Tough", hex: "#9A896F" },
+  { code: "132", name: "Cameo", type: "Armor Tough", hex: "#E5DDCA" },
+  { code: "129", name: "Rustic Copper", type: "Dual Tone", hex: "#B8733D" },
+  { code: "890", name: "Solid Copper", type: "Premium Metal", hex: "#B87333" },
+  { code: "920", name: "Galvalume Plus Steel", type: "Premium Metal", hex: "#A8ACAA" },
 ];
 
 export default function Services() {
@@ -121,8 +121,8 @@ export default function Services() {
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 {colors.map((color) => (
                   <div key={color.code} className="group">
-                    <div className="aspect-square bg-white/5 liquid-shield mb-4 flex items-center justify-center border border-white/5 group-hover:border-azure/50 transition-colors">
-                      <span className="text-azure font-bold text-xl opacity-20 group-hover:opacity-100 transition-opacity">{color.code}</span>
+                    <div className="aspect-square liquid-shield mb-4 flex items-center justify-center border border-white/10 group-hover:border-azure/50 transition-colors" style={{ backgroundColor: color.hex }}>
+                      <span className="font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: ['004','002','006','010','011','018','025'].includes(color.code) ? '#fff' : '#1E201F' }}>{color.code}</span>
                     </div>
                     <p className="text-[10px] uppercase tracking-widest font-bold text-silver">{color.name}</p>
                     <p className="text-[9px] opacity-40">Code: {color.code}</p>
@@ -140,8 +140,8 @@ export default function Services() {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                 {premiumColors.map((color) => (
                   <div key={color.code} className="group">
-                    <div className="aspect-square bg-sapphire/10 liquid-shield mb-4 flex items-center justify-center border border-azure/20 group-hover:bg-sapphire/20 transition-all">
-                      <span className="text-azure font-bold text-xl">{color.code}</span>
+                    <div className="aspect-square liquid-shield mb-4 flex items-center justify-center border border-azure/20 transition-all" style={{ backgroundColor: color.hex }}>
+                      <span className="font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: ['131'].includes(color.code) ? '#fff' : '#1E201F' }}>{color.code}</span>
                     </div>
                     <p className="text-[10px] uppercase tracking-widest font-bold text-silver">{color.name}</p>
                     <p className="text-[9px] text-azure uppercase tracking-tighter">{color.type}</p>
