@@ -60,10 +60,7 @@ export default function Gallery() {
                   alt={item.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-bg-onyx via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
-                  <span className="text-azure font-bold uppercase tracking-widest text-[10px] mb-2">{item.category}</span>
-                  <h3 className="text-2xl font-bold text-silver">{item.title}</h3>
-                </div>
+
               </motion.div>
             ))}
           </div>
