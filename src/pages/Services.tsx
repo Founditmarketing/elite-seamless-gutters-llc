@@ -29,13 +29,19 @@ const colors = [
   { code: "028", name: "Paint Grip Metallic", hex: "#7A7F7C" },
 ];
 
-const premiumColors = [
-  { code: "130", name: "Satin White", type: "Armor Tough", hex: "#E6E7E1" },
-  { code: "131", name: "Wood Beige", type: "Armor Tough", hex: "#9A896F" },
-  { code: "132", name: "Cameo", type: "Armor Tough", hex: "#E5DDCA" },
-  { code: "129", name: "Rustic Copper", type: "Dual Tone", hex: "#B8733D" },
-  { code: "890", name: "Solid Copper", type: "Premium Metal", hex: "#B87333" },
-  { code: "920", name: "Galvalume Plus Steel", type: "Premium Metal", hex: "#A8ACAA" },
+const armorToughColors = [
+  { code: "130", name: "Satin White", hex: "#E6E7E1" },
+  { code: "131", name: "Wood Beige", hex: "#9A896F" },
+  { code: "132", name: "Cameo", hex: "#E5DDCA" },
+];
+
+const dualToneColors = [
+  { code: "129", name: "Rustic Copper", hex: "#B8733D" },
+];
+
+const premiumMetals = [
+  { code: "890", name: "Solid Copper", hex: "#B87333" },
+  { code: "920", name: "Galvalume Plus Steel", hex: "#A8ACAA" },
 ];
 
 export default function Services() {
@@ -112,17 +118,18 @@ export default function Services() {
           </div>
 
           <div className="space-y-24">
-            {/* Standard Colors */}
+            {/* Traditional Painted Aluminum */}
             <div>
-              <h3 className="text-2xl font-bold mb-12 flex items-center">
-                Standard Selection
+              <h3 className="text-2xl font-bold mb-3 flex items-center">
+                Traditional Painted Aluminum
                 <div className="ml-6 flex-1 h-[1px] bg-white/10"></div>
               </h3>
+              <p className="text-xs text-silver/60 mb-12 tracking-wide">Factory Baked Finish &middot; Flexible for Roll Forming &middot; Exterior Durability</p>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 {colors.map((color) => (
                   <div key={color.code} className="group">
                     <div className="aspect-square liquid-shield mb-4 flex items-center justify-center border border-white/10 group-hover:border-azure/50 transition-colors" style={{ backgroundColor: color.hex }}>
-                      <span className="font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: ['004','002','006','010','011','018','025'].includes(color.code) ? '#fff' : '#1E201F' }}>{color.code}</span>
+                      <span className="font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: ['004','002','006','010','011','018','025','024','009','014','008','022','028'].includes(color.code) ? '#fff' : '#1E201F' }}>{color.code}</span>
                     </div>
                     <p className="text-[10px] uppercase tracking-widest font-bold text-silver">{color.name}</p>
                     <p className="text-[9px] opacity-40">Code: {color.code}</p>
@@ -131,20 +138,61 @@ export default function Services() {
               </div>
             </div>
 
-            {/* Premium Metals */}
+            {/* Armor Tough Painted Aluminum */}
             <div>
-              <h3 className="text-2xl font-bold mb-12 flex items-center">
-                Premium & Specialty Metals
+              <h3 className="text-2xl font-bold mb-3 flex items-center">
+                Armor Tough Painted Aluminum
                 <div className="ml-6 flex-1 h-[1px] bg-white/10"></div>
               </h3>
+              <p className="text-xs text-silver/60 mb-12 tracking-wide">Exclusive Product &middot; Abrasion Resistant &middot; Reduces Appearance of Staining</p>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                {premiumColors.map((color) => (
+                {armorToughColors.map((color) => (
                   <div key={color.code} className="group">
                     <div className="aspect-square liquid-shield mb-4 flex items-center justify-center border border-azure/20 transition-all" style={{ backgroundColor: color.hex }}>
                       <span className="font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: ['131'].includes(color.code) ? '#fff' : '#1E201F' }}>{color.code}</span>
                     </div>
                     <p className="text-[10px] uppercase tracking-widest font-bold text-silver">{color.name}</p>
-                    <p className="text-[9px] text-azure uppercase tracking-tighter">{color.type}</p>
+                    <p className="text-[9px] text-azure uppercase tracking-tighter">Armor Tough</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Dual Tone Painted Aluminum */}
+            <div>
+              <h3 className="text-2xl font-bold mb-3 flex items-center">
+                Dual Tone Painted Aluminum
+                <div className="ml-6 flex-1 h-[1px] bg-white/10"></div>
+              </h3>
+              <p className="text-xs text-silver/60 mb-12 tracking-wide">Created Through a Specialized 2-coat Process &middot; High Performance Exterior Finish</p>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                {dualToneColors.map((color) => (
+                  <div key={color.code} className="group">
+                    <div className="aspect-square liquid-shield mb-4 flex items-center justify-center border border-azure/20 transition-all" style={{ backgroundColor: color.hex }}>
+                      <span className="font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity text-white">{color.code}</span>
+                    </div>
+                    <p className="text-[10px] uppercase tracking-widest font-bold text-silver">{color.name}</p>
+                    <p className="text-[9px] text-azure uppercase tracking-tighter">Dual Tone</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Premium Metals */}
+            <div>
+              <h3 className="text-2xl font-bold mb-3 flex items-center">
+                Premium Metals
+                <div className="ml-6 flex-1 h-[1px] bg-white/10"></div>
+              </h3>
+              <p className="text-xs text-silver/60 mb-12 tracking-wide">3/4 Hard 16 oz. Copper &middot; 26 ga. Galvalume Plus Steel</p>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                {premiumMetals.map((color) => (
+                  <div key={color.code} className="group">
+                    <div className="aspect-square liquid-shield mb-4 flex items-center justify-center border border-azure/20 transition-all" style={{ backgroundColor: color.hex }}>
+                      <span className="font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#1E201F' }}>{color.code}</span>
+                    </div>
+                    <p className="text-[10px] uppercase tracking-widest font-bold text-silver">{color.name}</p>
+                    <p className="text-[9px] text-azure uppercase tracking-tighter">Premium Metal</p>
                   </div>
                 ))}
               </div>
