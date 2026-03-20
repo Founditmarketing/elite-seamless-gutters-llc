@@ -32,20 +32,20 @@
 @layer components {
   /* The Liquid Shield Hover Mechanic */
   .liquid-shield {
-    @apply rounded-lg transition-[border-radius,background-color,transform] duration-400 ease-in-out;
+    @apply rounded-none transition-[border-radius,background-color,transform] duration-400 ease-in-out;
   }
   
   .liquid-shield:hover {
-    @apply rounded-2xl;
+    @apply rounded-[2.5rem];
   }
 
   .btn-premium {
     @apply inline-flex items-center justify-center px-8 py-4 bg-sapphire text-silver font-medium uppercase tracking-widest text-sm hover:bg-azure hover:scale-[1.02] active:scale-[0.98];
-    @apply rounded-lg transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)];
+    @apply rounded-none transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)];
   }
 
   .btn-premium:hover {
-    @apply rounded-2xl shadow-[0_0_30px_rgba(10,132,255,0.3)];
+    @apply rounded-[2.5rem] shadow-[0_0_30px_rgba(10,132,255,0.3)];
   }
 
   .ui-line {
