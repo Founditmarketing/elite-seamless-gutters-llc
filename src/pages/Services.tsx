@@ -93,10 +93,7 @@ export default function Services() {
             <div className="p-10 bg-white/5 liquid-shield space-y-6">
               <h2 className="text-2xl font-bold">Gutter Guards</h2>
               <p>Premium leaf protection that keeps your system flowing freely year-round without dangerous ladder work.</p>
-              <div className="flex flex-col gap-3 mt-auto">
-                <a href="/services#colors" className="text-azure font-bold uppercase tracking-widest text-xs flex items-center hover:underline">View Color Chart →</a>
-                <a href="/contact" className="text-azure font-bold uppercase tracking-widest text-xs flex items-center hover:underline">Schedule Installation →</a>
-              </div>
+
               <div className="aspect-video liquid-shield overflow-hidden">
                 <img 
                   src="/horozantal gutter images/Very close up to gutters.png" 
