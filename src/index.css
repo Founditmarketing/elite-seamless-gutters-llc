@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-charcoal: #1A1A1C;
+  --color-bg-onyx: #0D0D0E;
+  --color-silver: #E0E5EC;
+  --color-titanium: #8A95A5;
+  --color-sapphire: #00509E;
+  --color-azure: #0A84FF;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-onyx text-titanium font-sans selection:bg-azure selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-silver font-medium tracking-tight;
+  }
+
+  p {
+    @apply text-titanium leading-relaxed;
+  }
+
+  a {
+    @apply text-silver transition-colors duration-300;
+  }
+}
+
+@layer components {
+  /* The Liquid Shield Hover Mechanic */
+  .liquid-shield {
+    @apply rounded-none transition-[border-radius,background-color,transform] duration-400 ease-in-out;
+  }
+  
+  .liquid-shield:hover {
+    @apply rounded-[2.5rem];
+  }
+
+  .btn-premium {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-sapphire text-silver font-medium uppercase tracking-widest text-sm hover:bg-azure hover:scale-[1.02] active:scale-[0.98];
+    @apply rounded-none transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)];
+  }
+
+  .btn-premium:hover {
+    @apply rounded-[2.5rem] shadow-[0_0_30px_rgba(10,132,255,0.3)];
+  }
+
+  .ui-line {
+    @apply w-full h-[1px] bg-white/10 my-12;
+  }
+
+  .nav-link {
+    @apply text-sm uppercase tracking-widest hover:text-azure relative py-2;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-[1px] bg-azure transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg-onyx;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 hover:bg-white/20 transition-colors;
+}
