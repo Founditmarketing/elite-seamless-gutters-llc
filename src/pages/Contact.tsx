@@ -27,24 +27,24 @@ export default function Contact() {
             >
               <h3 className="text-2xl font-bold text-silver mb-2">Get a Free Estimate</h3>
               <p className="text-sm opacity-60 mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" action="https://formspree.io/f/xpwdqvkj" method="POST">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="text-xs uppercase tracking-widest text-silver font-bold block mb-2">Name</label>
-                    <input type="text" placeholder="Your name" className="w-full bg-white/5 border border-white/10 px-4 py-3 text-silver placeholder:text-white/20 focus:border-azure focus:outline-none transition-colors rounded-none" />
+                    <input type="text" name="name" required placeholder="Your name" className="w-full bg-white/5 border border-white/10 px-4 py-3 text-silver placeholder:text-white/20 focus:border-azure focus:outline-none transition-colors rounded-none" />
                   </div>
                   <div>
                     <label className="text-xs uppercase tracking-widest text-silver font-bold block mb-2">Phone</label>
-                    <input type="tel" placeholder="Your phone number" className="w-full bg-white/5 border border-white/10 px-4 py-3 text-silver placeholder:text-white/20 focus:border-azure focus:outline-none transition-colors rounded-none" />
+                    <input type="tel" name="phone" placeholder="Your phone number" className="w-full bg-white/5 border border-white/10 px-4 py-3 text-silver placeholder:text-white/20 focus:border-azure focus:outline-none transition-colors rounded-none" />
                   </div>
                 </div>
                 <div>
                   <label className="text-xs uppercase tracking-widest text-silver font-bold block mb-2">Email</label>
-                  <input type="email" placeholder="Your email address" className="w-full bg-white/5 border border-white/10 px-4 py-3 text-silver placeholder:text-white/20 focus:border-azure focus:outline-none transition-colors rounded-none" />
+                  <input type="email" name="email" required placeholder="Your email address" className="w-full bg-white/5 border border-white/10 px-4 py-3 text-silver placeholder:text-white/20 focus:border-azure focus:outline-none transition-colors rounded-none" />
                 </div>
                 <div>
                   <label className="text-xs uppercase tracking-widest text-silver font-bold block mb-2">Message</label>
-                  <textarea rows={5} placeholder="Tell us about your project..." className="w-full bg-white/5 border border-white/10 px-4 py-3 text-silver placeholder:text-white/20 focus:border-azure focus:outline-none transition-colors rounded-none resize-none" />
+                  <textarea rows={5} name="message" required placeholder="Tell us about your project..." className="w-full bg-white/5 border border-white/10 px-4 py-3 text-silver placeholder:text-white/20 focus:border-azure focus:outline-none transition-colors rounded-none resize-none" />
                 </div>
                 <button type="submit" className="btn-premium w-full">Send Message</button>
               </form>
@@ -59,11 +59,11 @@ export default function Contact() {
                     <h3 className="text-silver font-bold uppercase tracking-widest text-xs">Call Us</h3>
                   </div>
                   <div className="space-y-2">
-                    <p className="text-xl font-bold text-silver">318-709-4447</p>
+                    <a href="tel:3187094447" className="text-xl font-bold text-silver hover:text-azure transition-colors block">318-709-4447</a>
                     <p className="text-xs opacity-60">Primary Support (24/7)</p>
                   </div>
                   <div className="space-y-2">
-                    <p className="text-xl font-bold text-silver">318-442-8509</p>
+                    <a href="tel:3184428509" className="text-xl font-bold text-silver hover:text-azure transition-colors block">318-442-8509</a>
                     <p className="text-xs opacity-60">Office (M-F 8-5)</p>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ export default function Contact() {
                     <Mail size={20} />
                     <h3 className="text-silver font-bold uppercase tracking-widest text-xs">Email Us</h3>
                   </div>
-                  <p className="text-lg break-all text-silver">Jmorgan@eliteseamlessgutterllc.com</p>
+                  <a href="mailto:Jmorgan@eliteseamlessgutterllc.com" className="text-lg break-all text-silver hover:text-azure transition-colors">Jmorgan@eliteseamlessgutterllc.com</a>
                 </div>
               </div>
 

@@ -46,7 +46,7 @@ export default function Gallery() {
             <span className="text-azure font-bold tracking-[0.4em] uppercase text-xs mb-6 block">Our Portfolio</span>
             <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter">Elite Installations</h1>
             <p className="text-xl max-w-2xl mx-auto opacity-80">
-              A visual testament to forty-five years of architectural excellence and invincible protection across Central Louisiana.
+              A visual testament to decades of architectural excellence and invincible protection across Central Louisiana.
             </p>
           </motion.div>
 

@@ -91,7 +91,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-                Forty-five years of<br />
+                Decades of<br />
                 <span className="text-azure">architectural mastery.</span>
               </h2>
               <p className="text-lg mb-10 max-w-xl">

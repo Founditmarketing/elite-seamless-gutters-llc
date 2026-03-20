@@ -124,7 +124,7 @@ export default function Services() {
               <p>High-capacity rectangular profiles for maximum drainage efficiency on larger installations.</p>
               <div className="aspect-video liquid-shield overflow-hidden">
                 <img 
-                  src="/horozantal gutter images/custom-downspouts.jpg" 
+                  src="/horozantal gutter images/custom-downspouts.png" 
                   alt="Square Downspouts" 
                   className="w-full h-full object-cover"
                 />

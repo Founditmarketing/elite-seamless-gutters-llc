@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -13,13 +13,9 @@ export default function Footer() {
               <span className="text-azure text-xs tracking-[0.3em] font-medium uppercase">Seamless Gutters</span>
             </div>
             <p className="text-sm max-w-xs">
-              Invincible protection from the truly elite. Over 45 years of architectural excellence in Central Louisiana.
+              Invincible protection from the truly elite. Decades of architectural excellence in Central Louisiana.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://www.facebook.com/profile.php?id=100057599566498" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 liquid-shield hover:bg-azure hover:text-white">
-                <Facebook size={18} />
-              </a>
-            </div>
+
           </div>
 
           {/* Quick Links */}
