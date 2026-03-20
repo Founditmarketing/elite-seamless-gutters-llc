@@ -111,19 +111,19 @@ export default function Home() {
                 title: "Seamless Gutters", 
                 desc: "Custom-fabricated 6\" and 7\" K-Style systems designed for maximum water diversion.",
                 icon: <Shield className="text-azure" size={32} />,
-                img: "/horozantal gutter images/Very close up to gutters.png"
+                img: "/horozantal gutter images/white house black gutters.png"
               },
               { 
                 title: "Gutter Guards", 
                 desc: "Elite protection systems that eliminate maintenance and prevent debris accumulation.",
                 icon: <Award className="text-azure" size={32} />,
-                img: "/horozantal gutter images/dark gutters space out.png"
+                img: "/horozantal gutter images/Very close up to gutters.png"
               },
               { 
                 title: "Custom Downspouts", 
                 desc: "Available in round and square profiles to match your home's architectural aesthetic.",
                 icon: <Clock className="text-azure" size={32} />,
-                img: "/horozantal gutter images/wood house with black gutters.png"
+                img: "/horozantal gutter images/custom-downspouts.jpg"
               }
             ].map((service, i) => (
               <motion.div
