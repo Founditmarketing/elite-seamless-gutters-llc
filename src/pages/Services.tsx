@@ -62,44 +62,73 @@ export default function Services() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="p-12 bg-white/5 liquid-shield space-y-8">
-              <h2 className="text-3xl font-bold">Seamless Gutter Systems</h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-silver font-bold uppercase tracking-widest text-xs mb-2">K-Style Profiles</h3>
-                  <p>Available in 6" and 7" configurations to handle even the heaviest tropical downpours.</p>
-                </div>
-                <div>
-                  <h3 className="text-silver font-bold uppercase tracking-widest text-xs mb-2">Gutter Guards</h3>
-                  <p>Premium leaf protection that keeps your system flowing freely year-round without the need for dangerous ladder work.</p>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* 6" K Style */}
+            <div className="p-10 bg-white/5 liquid-shield space-y-6">
+              <h2 className="text-2xl font-bold">6&quot; K Style Seamless Gutters</h2>
+              <p>Our standard residential gutter system, custom-fabricated on-site for a perfect seamless fit to your home.</p>
               <div className="aspect-video liquid-shield overflow-hidden">
                 <img 
                   src="/horozantal gutter images/white gutters white house.png" 
-                  alt="Gutter System" 
+                  alt="6 inch K Style Gutters" 
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
 
-            <div className="p-12 bg-white/5 liquid-shield space-y-8">
-              <h2 className="text-3xl font-bold">Downspout Solutions</h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-silver font-bold uppercase tracking-widest text-xs mb-2">Round Downspouts</h3>
-                  <p>Classic 4" round profiles for a timeless, architectural look.</p>
-                </div>
-                <div>
-                  <h3 className="text-silver font-bold uppercase tracking-widest text-xs mb-2">Square Downspouts</h3>
-                  <p>High-capacity 3"x4" and 4"x5" rectangular profiles for maximum drainage efficiency.</p>
-                </div>
-              </div>
+            {/* 7" K Style */}
+            <div className="p-10 bg-white/5 liquid-shield space-y-6">
+              <h2 className="text-2xl font-bold">7&quot; K Style Seamless Gutters</h2>
+              <p>Our high-capacity system designed for larger rooflines and heavy rainfall areas across Central Louisiana.</p>
               <div className="aspect-video liquid-shield overflow-hidden">
                 <img 
                   src="/horozantal gutter images/dark gutters.png" 
-                  alt="Downspouts" 
+                  alt="7 inch K Style Gutters" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Gutter Guards */}
+            <div className="p-10 bg-white/5 liquid-shield space-y-6">
+              <h2 className="text-2xl font-bold">Gutter Guards</h2>
+              <p>Premium leaf protection that keeps your system flowing freely year-round without dangerous ladder work.</p>
+              <div className="flex flex-col gap-3 mt-auto">
+                <a href="/services#colors" className="text-azure font-bold uppercase tracking-widest text-xs flex items-center hover:underline">View Color Chart →</a>
+                <a href="/contact" className="text-azure font-bold uppercase tracking-widest text-xs flex items-center hover:underline">Schedule Installation →</a>
+              </div>
+              <div className="aspect-video liquid-shield overflow-hidden">
+                <img 
+                  src="/horozantal gutter images/Very close up to gutters.png" 
+                  alt="Gutter Guards" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Round Downspouts */}
+            <div className="p-10 bg-white/5 liquid-shield space-y-6">
+              <h2 className="text-2xl font-bold">Round Downspouts</h2>
+              <p className="text-silver font-bold text-sm uppercase tracking-widest">Available in 4&quot;</p>
+              <p>Classic round profile for a timeless, architectural look that complements any home style.</p>
+              <div className="aspect-video liquid-shield overflow-hidden">
+                <img 
+                  src="/horozantal gutter images/dark gutters space out.png" 
+                  alt="Round Downspouts" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Square Downspouts */}
+            <div className="p-10 bg-white/5 liquid-shield space-y-6">
+              <h2 className="text-2xl font-bold">Square Downspouts</h2>
+              <p className="text-silver font-bold text-sm uppercase tracking-widest">Available in 3&quot;x 4&quot; and 4&quot;x 5&quot;</p>
+              <p>High-capacity rectangular profiles for maximum drainage efficiency on larger installations.</p>
+              <div className="aspect-video liquid-shield overflow-hidden">
+                <img 
+                  src="/horozantal gutter images/custom-downspouts.jpg" 
+                  alt="Square Downspouts" 
                   className="w-full h-full object-cover"
                 />
               </div>
