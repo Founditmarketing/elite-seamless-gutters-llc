@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -16,11 +16,8 @@ export default function Footer() {
               Invincible protection from the truly elite. Over 45 years of architectural excellence in Central Louisiana.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-3 bg-white/5 liquid-shield hover:bg-azure hover:text-white">
+              <a href="https://www.facebook.com/profile.php?id=100057599566498" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 liquid-shield hover:bg-azure hover:text-white">
                 <Facebook size={18} />
-              </a>
-              <a href="#" className="p-3 bg-white/5 liquid-shield hover:bg-azure hover:text-white">
-                <Instagram size={18} />
               </a>
             </div>
           </div>
@@ -44,20 +41,20 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <Phone size={16} className="text-azure mt-1 shrink-0" />
                 <div>
-                  <p className="text-silver font-medium">318-709-4447</p>
+                  <a href="tel:3187094447" className="text-silver font-medium hover:text-azure transition-colors">318-709-4447</a>
                   <p className="text-xs opacity-60">Primary, 24/7 Support</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
                 <Phone size={16} className="text-azure mt-1 shrink-0" />
                 <div>
-                  <p className="text-silver font-medium">318-442-8509</p>
+                  <a href="tel:3184428509" className="text-silver font-medium hover:text-azure transition-colors">318-442-8509</a>
                   <p className="text-xs opacity-60">Office, M-F 8-5</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
                 <Mail size={16} className="text-azure mt-1 shrink-0" />
-                <p className="break-all">Jmorgan@eliteseamlessgutterllc.com</p>
+                <a href="mailto:Jmorgan@eliteseamlessgutterllc.com" className="break-all hover:text-azure transition-colors">Jmorgan@eliteseamlessgutterllc.com</a>
               </li>
             </ul>
           </div>
