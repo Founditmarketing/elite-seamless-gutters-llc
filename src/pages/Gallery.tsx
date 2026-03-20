@@ -43,10 +43,22 @@ export default function Gallery() {
                 className="group relative aspect-[4/5] overflow-hidden liquid-shield cursor-pointer bg-white/5"
               >
                 <img 
-                  src={`https://picsum.photos/seed/arch-${item.id}/800/1000`} 
+                  src={[
+                    '/horozantal gutter images/Very close up to gutters.png',
+                    '/vertical image gutters/Garage door gutters.png',
+                    '/horozantal gutter images/black gutters good picture.png',
+                    '/vertical image gutters/close up metal building gutters.png',
+                    '/horozantal gutter images/brick house black gutters.png',
+                    '/vertical image gutters/close up black gutters.png',
+                    '/horozantal gutter images/dark gutters space out.png',
+                    '/vertical image gutters/metal building gutters.png',
+                    '/horozantal gutter images/dark gutters.png',
+                    '/horozantal gutter images/white gutters white house.png',
+                    '/horozantal gutter images/wood house with black gutters.png',
+                    '/horozantal gutter images/wood house with white gutters.png',
+                  ][i]} 
                   alt={item.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-bg-onyx via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
                   <span className="text-azure font-bold uppercase tracking-widest text-[10px] mb-2">{item.category}</span>

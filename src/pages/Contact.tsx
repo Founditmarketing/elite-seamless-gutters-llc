@@ -26,10 +26,9 @@ export default function Contact() {
               className="relative aspect-[4/5] lg:aspect-auto lg:h-full overflow-hidden liquid-shield bg-white/5"
             >
               <img 
-                src="https://picsum.photos/seed/modern-home-detail/800/1000" 
-                alt="Contact Form Placeholder" 
+                src="/vertical image gutters/close up black gutters.png" 
+                alt="Elite Gutters" 
                 className="w-full h-full object-cover opacity-50"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 flex items-center justify-center p-12 text-center">
                 <div className="space-y-6">

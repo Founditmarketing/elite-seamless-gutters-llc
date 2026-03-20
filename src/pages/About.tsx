@@ -75,10 +75,9 @@ export default function About() {
 
               <div className="aspect-video liquid-shield overflow-hidden">
                 <img 
-                  src="https://picsum.photos/seed/office-building/800/450" 
+                  src="/horozantal gutter images/white house black gutters.png" 
                   alt="Headquarters" 
                   className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>

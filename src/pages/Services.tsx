@@ -71,10 +71,9 @@ export default function Services() {
               </div>
               <div className="aspect-video liquid-shield overflow-hidden">
                 <img 
-                  src="https://picsum.photos/seed/gutter-install/800/450" 
+                  src="/horozantal gutter images/white gutters white house.png" 
                   alt="Gutter System" 
                   className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>
@@ -93,10 +92,9 @@ export default function Services() {
               </div>
               <div className="aspect-video liquid-shield overflow-hidden">
                 <img 
-                  src="https://picsum.photos/seed/metal-work/800/450" 
+                  src="/horozantal gutter images/dark gutters.png" 
                   alt="Downspouts" 
                   className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>

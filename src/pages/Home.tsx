@@ -9,7 +9,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center bg-bg-onyx">
         <div className="absolute inset-0 z-0 opacity-40">
           <img 
-            src="https://picsum.photos/seed/modern-architecture/1920/1080" 
+            src="/horozantal gutter images/brick house black gutters.png" 
             alt="Hero Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -87,7 +87,7 @@ export default function Home() {
               className="relative aspect-square liquid-shield overflow-hidden"
             >
               <img 
-                src="https://picsum.photos/seed/construction-detail/800/800" 
+                src="/horozantal gutter images/black gutters good picture.png" 
                 alt="Craftsmanship" 
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                 referrerPolicy="no-referrer"
@@ -111,19 +111,19 @@ export default function Home() {
                 title: "Seamless Gutters", 
                 desc: "Custom-fabricated 6\" and 7\" K-Style systems designed for maximum water diversion.",
                 icon: <Shield className="text-azure" size={32} />,
-                img: "https://placehold.co/600x400/1A1A1C/0A84FF.png?text=6-Inch+Gutter+System"
+                img: "/horozantal gutter images/Very close up to gutters.png"
               },
               { 
                 title: "Gutter Guards", 
                 desc: "Elite protection systems that eliminate maintenance and prevent debris accumulation.",
                 icon: <Award className="text-azure" size={32} />,
-                img: "https://placehold.co/600x400/1A1A1C/0A84FF.png?text=Gutter+Guard+Detail"
+                img: "/horozantal gutter images/dark gutters space out.png"
               },
               { 
                 title: "Custom Downspouts", 
                 desc: "Available in round and square profiles to match your home's architectural aesthetic.",
                 icon: <Clock className="text-azure" size={32} />,
-                img: "https://placehold.co/600x400/1A1A1C/0A84FF.png?text=Square+Downspout+Profile"
+                img: "/horozantal gutter images/wood house with black gutters.png"
               }
             ].map((service, i) => (
               <motion.div
@@ -136,10 +136,9 @@ export default function Home() {
               >
                 <div className="aspect-video overflow-hidden">
                   <img 
-                    src={`https://picsum.photos/seed/${['gutter-system', 'protection-detail', 'architectural-metal'][i]}/600/400`} 
+                    src={service.img} 
                     alt={service.title} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="p-12">
@@ -217,10 +216,18 @@ export default function Home() {
                 className="aspect-[3/4] overflow-hidden liquid-shield cursor-pointer"
               >
                 <img 
-                  src={`https://picsum.photos/seed/installation-${item}/600/800`} 
+                  src={[
+                    '/vertical image gutters/Garage door gutters.png',
+                    '/vertical image gutters/close up black gutters.png',
+                    '/vertical image gutters/close up metal building gutters.png',
+                    '/vertical image gutters/metal building gutters.png',
+                    '/horozantal gutter images/dark gutters.png',
+                    '/horozantal gutter images/white gutters white house.png',
+                    '/horozantal gutter images/wood house with white gutters.png',
+                    '/horozantal gutter images/white house black gutters.png',
+                  ][item - 1]} 
                   alt={`Project ${item}`} 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                  referrerPolicy="no-referrer"
                 />
               </motion.div>
             ))}
